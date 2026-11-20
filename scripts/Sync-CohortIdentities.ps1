@@ -64,7 +64,7 @@ foreach ($Row in $Roster) {
     $Members = (Invoke-RestMethod -Uri "https://graph.microsoft.com/v1.0/groups/$GroupId/members" -Headers $Headers).value
     if ($Members.id -notcontains $User.id) {
       $MemberBody = @{ '@odata.id' = "https://graph.microsoft.com/v1.0/directoryObjects/$($User.id)" } | ConvertTo-Json
-      Invoke-RestMethod -Method Post -Uri "https://graph.microsoft.com/v1.0/groups/$GroupId/members/$ref" -Headers $Headers -Body $MemberBody
+      Invoke-RestMethod -Method Post -Uri "https://graph.microsoft.com/v1.0/groups/$GroupId/members/`$ref" -Headers $Headers -Body $MemberBody
     }
 
     # Assign M365 License if available in tenant
