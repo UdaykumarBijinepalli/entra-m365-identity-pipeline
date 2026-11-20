@@ -93,7 +93,7 @@ foreach ($Row in $Roster) {
       # 2. Remove from Cohort Security Group
       $Members = (Invoke-RestMethod -Uri "https://graph.microsoft.com/v1.0/groups/$GroupId/members" -Headers $Headers).value
       if ($Members.id -contains $User.id) {
-        Invoke-RestMethod -Method Delete -Uri "https://graph.microsoft.com/v1.0/groups/$GroupId/members/$($User.id)/$ref" -Headers $Headers
+        Invoke-RestMethod -Method Delete -Uri "https://graph.microsoft.com/v1.0/groups/$GroupId/members/$($User.id)/`$ref" -Headers $Headers
       }
 
       # 3. Reclaim any assigned M365 licenses
