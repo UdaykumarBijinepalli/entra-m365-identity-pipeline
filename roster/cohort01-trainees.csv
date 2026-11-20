@@ -1,0 +1,4 @@
+﻿EmployeeId,FirstName,LastName,MailNickname,Department,Cohort,Status
+TRN-101,Aarav,Sharma,aarav.sharma,Cloud Engineering,Cohort01,Active
+TRN-102,Priya,Nair,priya.nair,DevSecOps,Cohort01,Active
+TRN-103,Rohan,Verma,rohan.verma,Platform Ops,Cohort01,Offboarded
